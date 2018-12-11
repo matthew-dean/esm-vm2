@@ -1,0 +1,25 @@
+{
+  "name": "esm-vm2",
+  "version": "1.0.0",
+  "description": "Test esm with vm2",
+  "main": "index.js",
+  "module": "main.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthew-dean/esm-vm2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matthew-dean/esm-vm2/issues"
+  },
+  "homepage": "https://github.com/matthew-dean/esm-vm2#readme",
+  "dependencies": {
+    "esm": "^3.0.84",
+    "vm2": "^3.6.4"
+  },
+  "devDependencies": {}
+}
