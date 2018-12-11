@@ -5,14 +5,16 @@ const vm = new NodeVM({
   console: 'inherit',
   sandbox: {},
   require: {
-    external: true
+    external: true,
+    context: 'sandbox'
   }
 })
 
 var vmPath = require.resolve('./vm.js')
 
 let vmSandbox = new VMScript(`
-  module.exports = require(${vmPath})
+  require = require("esm")(module)
+  module.exports = require('${vmPath}')
 `)
 
 module.exports = vm.run(vmSandbox, __filename);
